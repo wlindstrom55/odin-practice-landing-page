@@ -1,41 +1,53 @@
 body {
     display: flex;
     flex-direction: column;
+    margin: 0; /* need this apparently to expand header AND footer div to top and sides */
 }
 
 .header {
     display: flex;
     flex-direction: row;
-    padding: 16px;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
     background-color: #1F2937;
     color: #F9FAF8;
+    margin: 0px;
+    gap: 200px;
 }
 
 a {
-color: #F9FAF8;
+    color: #F9FAF8;
+    text-decoration: none;
 }
 
-#header-logo {
-    font-weight: extra bold;
+.header-logo {
+    font-weight: 800;
+    font-family: Verdana;
+    padding: 15px;
 }
 
 .header-links {
-    font-size: 15px;
+    display: flex;
+    font-size: 12px;
+    font-family: Verdana;
+    font-weight: 0;
+    padding: 15px;
+    gap: 30px;
+    justify-content: space-between;
 }
-/* .content is the class of the body */
+/* .content is the class of the middle 4 boxes*/
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .one-quarter {
     background-color: #1F2937;
+    margin: 0px;
+    padding: 0px;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: center;
     width: 100%; /*stretch to width of screen */
 }
@@ -46,7 +58,7 @@ color: #F9FAF8;
     flex: 0 1 auto;
     flex-wrap: nowrap;
     width: 300px;
-    height: 170px;
+    height: 200px;
     margin: 24px;
 }
 
@@ -55,7 +67,7 @@ color: #F9FAF8;
     justify-content: center;
     align-items: center;
     width: 325px;
-    height: 150px;
+    height: 155px;
     background-color: grey;
     text-align: center;
     margin: 24px;
@@ -64,37 +76,45 @@ color: #F9FAF8;
 }
 
 #awesome {
-font-size: 48px;
-font-weight: extra-bold;
-color: #F9FAF8;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: Verdana;
+    color: #F9FAF8;
+    margin-right: 40px;
 }
 
 #subtext1 {
-color: #E5E7EB;
-font-size: 14px;
+    color: #E5E2EB;
+    font-size: 13px;
+    font-weight: 0;
 }
 
 #signup-button1 {
     width: 100px;
+    height: 30px;
+    flex: 0 1 auto;
     background-color: #3882F6;
     border-radius: 8px; /* corner rounding */
     color: white;
+    margin-bottom: 48px;
+    margin-top: 6px;
 }
 
 .two-quarter {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 0 0 auto;
+    flex: 1 0 auto;
 }
 
 #two-quarter-header {
-    font-weight: extra-bold;
+    font-weight: 700;
+    font-family: Verdana;
     text-align: center;
-    font-size: 36px;
+    font-size: 25px;
     color: #1F2937;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-top: 40px;
+    margin-bottom: 24px;
 }
 
 .images-and-subtext {
@@ -169,22 +189,120 @@ gap: 34px;
     justify-content: center;
     align-items: center;
     gap: 36px;
-    margin-top: 12px;
-    margin-bottom: 24px;
+    margin-top: 8px;
+    margin-bottom: 50px;
 }
 #subtext2 {
     width: 120px;
     font-size: 14px;
+    text-align: center;
 }
 #subtext3 {
     width: 120px;
     font-size: 14px;
+    text-align: center;
 }
 #subtext4 {
     width: 120px;
     font-size: 14px;
+    text-align: center;
 }
 #subtext5 {
     width: 120px;
     font-size: 14px;
+    text-align: center;
 }
+
+.three-quarter {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E7EB;
+    width: 100%;
+    padding: 24px;
+}
+#quote {
+    margin-top: 40px;
+    width: 500px;
+    height: 120px;
+    font-size: 24px;
+    font-style: italic;
+    color: #1F2937;
+}
+#attribution {
+    font-size: 18px;
+    font-weight: 850;
+    margin-left: 200px;
+    justify-content: end;
+    margin-bottom: 40px;
+    font-family: Verdana;
+}
+
+.four-quarter {
+    margin-top 48px;
+    height: 190px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#bluebox {
+    margin: 24px;
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    height: 100px;
+    padding: 10px;
+    background: #3882F6;
+    border-radius: 8px;
+    flex: 0 1 auto;
+}
+#bluebox-left {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    alight-items: center;
+    margin: 25px;
+}
+#call {
+    height: 2px;
+    color: white;
+    font-weight: 650;
+    font-size: 14px;
+    font-family: Verdana;
+}
+#signup {
+    height: 10px;
+    font-size: 13px;
+    color: #F9FAF8;
+}
+#bluebox-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 50px;
+}
+#signup-button2 {
+    padding-right: 14px;
+    padding-left: 14px;
+    border-radius: 8px;
+    background: #3882F6;
+    color: white;
+    border-color: white;
+}
+
+.footer {
+    background-color: #1F2937;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    height: auto;
+}
+#copyright {
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    }
